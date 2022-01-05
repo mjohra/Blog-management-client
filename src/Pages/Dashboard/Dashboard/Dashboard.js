@@ -12,42 +12,42 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link, Outlet } from "react-router-dom";
 import { Button } from "@mui/material";
+import AddCardIcon from '@mui/icons-material/AddCard';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import AllInboxIcon from '@mui/icons-material/AllInbox';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 const drawerWidth = 240;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
-  //   let { path} = useRouteMatch();
-  //   const { admin } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <div>
+    <div className="sidebar">
       <Toolbar />
       <Divider />
-      <Link style={{ textDecoration: "none", color: "Blue" , textAlign:"left"}} to={`/dashboard`}>
-        <Button className="dash-btn" >Dashboard</Button>
+      <Link style={{ textDecoration: "none" , textAlign:"left" }} className="dashboard mt-5 text-black" to={`/dashboard`}>
+        <DashboardIcon></DashboardIcon><Button color="inherit">Dashboard</Button>
       </Link>
       <Box className="dash">
-        <Link style={{ textDecoration: "none", color: "Blue" , textAlign:"left"}} to={`/dashboard/addBlog`}>
-          <Button className="dash-btn" color="inherit">Add Blog</Button>
+        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/addBlog`}>
+        <AddCardIcon></AddCardIcon><Button className="dash-btn" color="inherit">Add Blog</Button>
         </Link>
-        <Link style={{ textDecoration: "none", color: "Blue" , textAlign:"left"}} to={`/dashboard/managePost`}>
-          <Button className="dash-btn" color="inherit">Manage Post</Button>
+        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/managePost`}>
+          <AllInboxIcon></AllInboxIcon><Button className="dash-btn" color="inherit">All Post Details</Button>
         </Link>
-        <Link style={{ textDecoration: "none", color: "Blue" , textAlign:"left"}} to={`/dashboard/manageUserPost`}>
-          <Button className="dash-btn" color="inherit">Manage User Post</Button>
+        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/manageUserPost`}>
+          <ContactMailIcon></ContactMailIcon><Button className="dash-btn" color="inherit">Manage User Post</Button>
         </Link>
-        <Link to={`/dashboard/manageUser`}>
-          <Button className="dash-btn" color="inherit">Manage User</Button>
-        </Link>
-        <Link to={`/dashboard/makeAdmin`}>
-          <Button className="dash-btn" color="inherit">MakeAdmin</Button>
+        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/makeAdmin`}>
+          <AdminPanelSettingsIcon></AdminPanelSettingsIcon><Button className="dash-btn" color="inherit">Make Admin</Button>
         </Link>
       </Box>
      

@@ -6,7 +6,6 @@ import Home from './Pages/Home/Home';
 import DashboardHome from './Pages/Dashboard/DashboardHome/DashboardHome';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin/MakeAdmin';
 import ManageUserPost from './Pages/Dashboard/ManageUserPost/ManageUserPost';
-import ManageUsers from './Pages/Dashboard/ManageUsers/ManageUsers';
 import ManagePosts from './Pages/Dashboard/ManagePosts/ManagePosts';
 import AddBlog from './Pages/Dashboard/AddBlog/AddBlog';
 
@@ -21,7 +20,6 @@ function App() {
             <Route path="/dashboard/addBlog" element={<AddBlog></AddBlog>}></Route>
             <Route path="/dashboard/manageUserPost" element={<ManageUserPost></ManageUserPost>}></Route>
             <Route path="/dashboard/managePost" element={<ManagePosts></ManagePosts>}></Route>
-            <Route path="/dashboard/manageUser" element={<ManageUsers></ManageUsers>}></Route>
             </Route>
             <Route path="/" element={<Home></Home>}></Route>
           </Routes>
