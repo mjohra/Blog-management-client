@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import DeleteForever from "@mui/icons-material/DeleteForever";
-import './ManageUserPost.css';
+import "./ManageUserPost.css";
 
 const ManageUserPost = () => {
   const [products, setProducts] = useState([]);
@@ -34,11 +34,12 @@ const ManageUserPost = () => {
         <h1 className="text-center mb-5 text-title">Manage User Post</h1>
         <div className="row g-3">
           {products.map((product) => (
-            <div key={product._id} className="col-lg-3 col-md-4 col-12 details-box">
+            <div
+              key={product._id}
+              className="col-lg-3 col-md-4 col-12 details-box"
+            >
               <Card className="text-center ">
-                <Card.Header className="card-head">
-                {product._id}
-                </Card.Header>
+                <Card.Header className="card-head">{product._id}</Card.Header>
                 <Card.Body className="c-body">
                   <Card.Title>Blog Title: {product.title}</Card.Title>
                   <Card.Text>Blog Category: {product.category}</Card.Text>
