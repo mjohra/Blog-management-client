@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@200&family=Rubik&family=Ubuntu&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Shalimar&family=Yuji+Syuku&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Shalimar&family=Yuji+Syuku&display=swap");
 
 .dashboard {
   font-family: "Ubuntu", sans-serif;
@@ -22,18 +22,16 @@
 }
 
 .text-title {
-    display: block;
-    margin: 11px 0 17px 0;
-    font-size: 40px;
-    line-height: 80px;
-    color: #c51ca0;
-    text-shadow: 0 7.36px 8.896px #fa7ff0, 0 -5px 5px #fff;
-    letter-spacing: -4px;
-    font-family: "Yuji Syuku", serif;
-    text-transform: uppercase;
-  }
-
-
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 40px;
+  line-height: 50px;
+  color: #0c0c0c;
+  text-shadow: 0 7.36px 8.896px #b3abb2, 0 -5px 5px #fff;
+  letter-spacing: -4px;
+  font-family: "Yuji Syuku", serif;
+  /* text-transform: uppercase; */
+}
 .btn-sub {
   font-family: "Ubuntu", sans-serif;
   border-radius: 5px;
@@ -43,7 +41,108 @@
   font-family: "Rubik", sans-serif;
   letter-spacing: 1px;
 }
-/* .card {
-  border-radius: 8px;
-  box-shadow: 1px 1px 1px rgba(32, 32, 31, 0.671);
-} */
+.btn-submit{
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: white;
+  color: #000000;
+  font-family: "Yuji Syuku", serif;
+  letter-spacing: 1px;
+}
+.btn-submit:hover{
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: "Yuji Syuku", serif;
+  letter-spacing: 2px;
+}
+
+/* dashboard home */
+.covered {
+  width: 100%;
+  height: 55vmin;
+  background: url("../../../images/b.jpg");
+  font-family: "Yuji Syuku", serif;
+  /* background-position: rem 130rem; */
+  background-size: 100%;
+  position: relative;
+}
+
+.covered .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.covered .content {
+  width: 100%;
+  height: 100%;
+  background: rgba(170, 170, 170, 0.466);
+  padding-top: 19vmin;
+}
+
+.covered .content > h1 {
+  font-size: 6vmin;
+  color: rgb(78, 77, 77); 
+  font-family: "Yuji Syuku", serif;
+}
+
+
+.covered .content > p {
+  font-size: 2vmin;
+  color: #444141;
+  font-family: "Yuji Syuku", serif;
+}
+
+.numbers .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 10rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 50px 0px #9b759b;
+}
+
+.numbers {
+  margin-top: -15vmin;
+  font-family: "Yuji Syuku", serif;
+}
+
+.numbers .rect h1 {
+  font-size: 5rem;
+  color:rgb(151, 73, 73);
+  font-family: "Yuji Syuku", serif;
+}
+.numbers .rect h5 {
+  
+  color:rgb(151, 73, 73);
+  font-family: "Yuji Syuku", serif;
+}
+.numbers .rect .fa-icon{
+    color: hsla(0, 42%, 60%, 0.712)
+}
+
+
+/* Make it responsive */
+@media only screen and (max-width:688px) {
+.covered {
+  width: 100%;
+  height: 75vmin;
+}
+}
+@media only screen and (min-width:689px) and (max-width: 991px){
+.covered {
+  width: 100%;
+  height: 75vmin;
+}
+}
+

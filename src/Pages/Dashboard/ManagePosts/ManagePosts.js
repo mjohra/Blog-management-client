@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const ManagePosts = () => {
@@ -11,13 +10,13 @@ const ManagePosts = () => {
   }, [updated]);
   return (
     <>
-      <h1 className="text-title text-center  mb-5">All Post Details</h1>
+      <h1 className="text-title text-center mb-5">All Post Details</h1>
       <div className="row">
         {posts.map((post) => (
           <div key={post._id} className="col-lg-3 col-md-4 col-12 mb-5">
             <div className="card card-details shadow-lg ">
               <div className="text-center">
-                <img style={{width:'200px',height:'200px'}}
+                <img style={{width:'300px',height:'200px'}}
                   src={`data:image/png;base64,${post.image}`}
                   className="card-img-top card-img p-3 w-50 "
                   alt="..."
@@ -31,6 +30,10 @@ const ManagePosts = () => {
                 <hr />
                 <p className="text-left">
                   Description: {post.description}
+                </p>
+                <hr />
+                <p className="text-left">
+                  Blog Type: {post.category}
                 </p>
                 <hr />
                 <p className="text-left">

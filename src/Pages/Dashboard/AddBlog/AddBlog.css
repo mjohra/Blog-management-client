@@ -29,3 +29,24 @@ select {
   padding-top:5px;
   
 }
+.add-admin form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-admin form input{
+  width: 50%;
+  margin-bottom: 13px;
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 4px;
+}
+@media only screen and (max-width: 600px) {
+  .add-admin form input{
+    width: 100%;
+    margin-bottom: 13px;
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: 4px;
+  }
+}

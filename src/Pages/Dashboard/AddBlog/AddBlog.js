@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import "./AddBlog.css";
+import NearMeIcon from '@mui/icons-material/NearMe';
 
 const AddBlog = () => {
   const { register, reset } = useForm();
@@ -28,10 +29,9 @@ const AddBlog = () => {
     formData.append("image", image);
     formData.append("date", currDate);
     formData.append("time", currTime);
-    
 
     fetch("https://calm-eyrie-50135.herokuapp.com/blog", {
-    // fetch("http://localhost:5000/blog", {
+      // fetch("http://localhost:5000/blog", {
       method: "POST",
       body: formData,
     })
@@ -48,50 +48,56 @@ const AddBlog = () => {
   };
   return (
     <div>
-      <Container className="text center add-blog pt-5">
-        <h1>Add blog</h1>
-        <form onSubmit={handleSubmit}>
-          <input
-            {...register("name", { required: true, maxLength: 20 })}
-            placeholder="Name"
-            onChange={(e) => setName(e.target.value)}
-            // defaultValue={user.displayName}
-          />
-          <input
-            {...register("email", { required: true })}
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <select className="drop" {...register("category", { required: true })}
-          onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="Category-1" >Category-1</option>
-            <option value="Category-2" >Category-2</option>
-            <option value="Category-3" >Category-3</option>
-            <option value="Category-4" >Category-4</option>
-            
-          </select>
-          <input
-            accept="image/*"
-            type="file"
-            onChange={(e) => setImage(e.target.files[0])}
-          />
-          <input
-            {...register("title", { required: true })}
-            placeholder="Title"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <textarea
-            {...register("description")}
-            placeholder="Description"
-            onChange={(e) => setDescription(e.target.value)}
-          />
-
-          <input
-            className="btn-buy fs-3 border-0 rounded-1 fw-bold"
-            type="submit"
-          />
-        </form>
+      <Container className="center add-blog pt-5">
+        <h1 className="text-title text-center pb-5">Add blog</h1>
+        <Container>
+          <div className="pb-5">
+            <form onSubmit={handleSubmit}>
+              <input
+                {...register("name", { required: true, maxLength: 20 })}
+                placeholder="Name"
+                onChange={(e) => setName(e.target.value)}
+                // defaultValue={user.displayName}
+              />
+              <input
+                {...register("email", { required: true })}
+                placeholder="Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <select
+                className="drop"
+                {...register("category", { required: true })}
+                onChange={(e) => setCategory(e.target.value)}
+              >
+                <option value="Travel">Travel</option>
+                <option value="Food">Food</option>
+                <option value="Lifestyle">Lifestyle</option>
+                <option value="DIY">DIY</option>
+              </select>
+              <input
+                accept="image/*"
+                type="file"
+                onChange={(e) => setImage(e.target.files[0])}
+              />
+              <input
+                {...register("title", { required: true })}
+                placeholder="Title"
+                onChange={(e) => setTitle(e.target.value)}
+              />
+              <textarea
+                {...register("description")}
+                placeholder="Description"
+                onChange={(e) => setDescription(e.target.value)}
+              />
+              
+  
+              <input 
+                className="btn-submit fs-4 pb-1 NearMeIcon rounded-1 fw-bold"
+                type= "submit" 
+              />
+            </form>
+          </div>
+        </Container>
       </Container>
     </div>
   );

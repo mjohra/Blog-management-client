@@ -32,7 +32,7 @@ const ManageUserPost = () => {
     <div>
       <div id="services" className="container-fluid">
         <h1 className="text-center mb-5 text-title">Manage User Post</h1>
-        <div className="row g-4">
+        <div className="row g-3">
           {products.map((product) => (
             <div key={product._id} className="col-lg-3 col-md-4 col-12 details-box">
               <Card className="text-center ">
