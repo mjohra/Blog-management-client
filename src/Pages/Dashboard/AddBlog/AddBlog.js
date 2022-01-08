@@ -30,8 +30,7 @@ const AddBlog = () => {
     formData.append("date", currDate);
     formData.append("time", currTime);
 
-    fetch("https://calm-eyrie-50135.herokuapp.com/blog", {
-      // fetch("http://localhost:5000/blog", {
+    fetch("https://shielded-meadow-42528.herokuapp.com/blog", {
       method: "POST",
       body: formData,
     })

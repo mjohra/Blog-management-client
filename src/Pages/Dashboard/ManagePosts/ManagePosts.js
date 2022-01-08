@@ -4,7 +4,7 @@ const ManagePosts = () => {
   const [posts, setPosts] = useState([]);
   const [updated, setUpdated] = useState(false);
   useEffect(() => {
-    fetch("https://calm-eyrie-50135.herokuapp.com/blog")
+    fetch("https://shielded-meadow-42528.herokuapp.com/blog")
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, [updated]);
@@ -14,7 +14,7 @@ const ManagePosts = () => {
       <div className="row">
         {posts.map((post) => (
           <div key={post._id} className="col-lg-3 col-md-4 col-12 mb-5">
-            <div className="card card-details shadow-lg ">
+            <div className="card shadow-lg">
               <div className="text-center">
                 <img style={{width:'300px',height:'200px'}}
                   src={`data:image/png;base64,${post.image}`}

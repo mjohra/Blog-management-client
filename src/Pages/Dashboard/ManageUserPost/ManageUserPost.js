@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import DeleteForever from "@mui/icons-material/DeleteForever";
-import "./ManageUserPost.css";
 
 const ManageUserPost = () => {
   const [products, setProducts] = useState([]);
   const [updated, setUpdated] = useState(false);
   useEffect(() => {
-    fetch("https://calm-eyrie-50135.herokuapp.com/blog")
+    fetch("https://shielded-meadow-42528.herokuapp.com/blog")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [updated]);
@@ -15,7 +14,7 @@ const ManageUserPost = () => {
   const handleDelete = (id) => {
     const confirmation = window.confirm("Do you want to delete?");
     if (confirmation) {
-      const url = `https://calm-eyrie-50135.herokuapp.com/blog/${id}`;
+      const url = `https://shielded-meadow-42528.herokuapp.com/blog/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -39,7 +38,7 @@ const ManageUserPost = () => {
               className="col-lg-3 col-md-4 col-12 details-box"
             >
               <Card className="text-center ">
-                <Card.Header className="card-head">{product._id}</Card.Header>
+                <Card.Header className="card-head text-white">{product._id}</Card.Header>
                 <Card.Body className="c-body">
                   <Card.Title>Blog Title: {product.title}</Card.Title>
                   <Card.Text>Blog Category: {product.category}</Card.Text>

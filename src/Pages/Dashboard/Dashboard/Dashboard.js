@@ -1,5 +1,4 @@
 import * as React from "react";
-import './DashBoard.css';
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -12,11 +11,12 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link, Outlet } from "react-router-dom";
 import { Button } from "@mui/material";
-import AddCardIcon from '@mui/icons-material/AddCard';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import AllInboxIcon from '@mui/icons-material/AllInbox';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import AddCardIcon from "@mui/icons-material/AddCard";
+import HomeIcon from '@mui/icons-material/Home';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import AllInboxIcon from "@mui/icons-material/AllInbox";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 
 const drawerWidth = 240;
 
@@ -32,24 +32,64 @@ function Dashboard(props) {
     <div className="sidebar">
       <Toolbar />
       <Divider />
-      <Link style={{ textDecoration: "none" , textAlign:"left" }} className="dashboard mt-5 text-black" to={`/dashboard`}>
-        <DashboardIcon></DashboardIcon><Button color="inherit">Dashboard</Button>
+      <Link
+        style={{ textDecoration: "none", textAlign: "left" }}
+        className="dashboard mt-5 text-black"
+        to={`/dashboard`}
+      >
+        <DashboardIcon></DashboardIcon>
+        <Button color="inherit">Dashboard</Button>
+      </Link>
+      <Link
+        style={{ textDecoration: "none", textAlign: "left" }}
+        className="dashboard text-black"
+        to={`/`}
+      >
+        <HomeIcon></HomeIcon>
+        <Button color="inherit">Home</Button>
       </Link>
       <Box className="dash">
-        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/addBlog`}>
-        <AddCardIcon></AddCardIcon><Button className="dash-btn" color="inherit">Add Blog</Button>
+        <Link
+          style={{ textDecoration: "none", textAlign: "left" }}
+          className="dashboard"
+          to={`/dashboard/addBlog`}
+        >
+          <AddCardIcon></AddCardIcon>
+          <Button className="dash-btn" color="inherit">
+            Add Blog
+          </Button>
         </Link>
-        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/managePost`}>
-          <AllInboxIcon></AllInboxIcon><Button className="dash-btn" color="inherit">All Post Details</Button>
+        <Link
+          style={{ textDecoration: "none", textAlign: "left" }}
+          className="dashboard"
+          to={`/dashboard/managePost`}
+        >
+          <AllInboxIcon></AllInboxIcon>
+          <Button className="dash-btn" color="inherit">
+            All Post Details
+          </Button>
         </Link>
-        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/manageUserPost`}>
-          <ContactMailIcon></ContactMailIcon><Button className="dash-btn" color="inherit">Manage User Post</Button>
+        <Link
+          style={{ textDecoration: "none", textAlign: "left" }}
+          className="dashboard"
+          to={`/dashboard/manageUserPost`}
+        >
+          <ContactMailIcon></ContactMailIcon>
+          <Button className="dash-btn" color="inherit">
+            Manage User Post
+          </Button>
         </Link>
-        <Link style={{ textDecoration: "none" , textAlign:"left"}} className="dashboard" to={`/dashboard/makeAdmin`}>
-          <AdminPanelSettingsIcon></AdminPanelSettingsIcon><Button className="dash-btn" color="inherit">Make Admin</Button>
+        <Link
+          style={{ textDecoration: "none", textAlign: "left" }}
+          className="dashboard"
+          to={`/dashboard/makeAdmin`}
+        >
+          <AdminPanelSettingsIcon></AdminPanelSettingsIcon>
+          <Button className="dash-btn" color="inherit">
+            Make Admin
+          </Button>
         </Link>
       </Box>
-     
     </div>
   );
 
@@ -57,7 +97,7 @@ function Dashboard(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex"}}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar
         position="fixed"

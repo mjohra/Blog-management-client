@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Shalimar&family=Yuji+Syuku&display=swap");
+.contact {
+  background: linear-gradient(
+    to top,
+    #141e30,
+    #243b55
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding-bottom: 50px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact form input,
+textarea {
+  width: 50%;
+  margin-bottom: 8px;
+  border: 1px solid #30336b;
+}
+.info {
+  font-size: 20px;
+  font-family: "Yuji Syuku", serif;
+  color: #23e0cd;
+}
+h1 {
+  font-family: "Yuji Syuku", serif;
+}
+@media only screen and (max-width: 450px){
+  .contact {
+    width:90vw;
+  }
+  .info {
+    font-size: 17px;
+    font-family: "Yuji Syuku", serif;
+    color: #23e0cd;
+  }
+  h1 {
+    font-family: "Yuji Syuku", serif;
+}
+p{
+  flex-wrap: wrap;
+  padding:10px;
+}
+}
